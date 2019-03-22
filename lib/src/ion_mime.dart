@@ -77,7 +77,7 @@ ContentType ion_mime(String path) {
       p = "image";
       s = "webp";
       break;
-    
+
     case "weba":
       p = "audio";
       s = "webm";

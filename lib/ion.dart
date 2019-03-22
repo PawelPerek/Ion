@@ -1,3 +1,5 @@
+library ion;
+
 import 'dart:io';
 import 'src/ion_sock.dart';
 import 'src/ion_req.dart';
@@ -14,10 +16,10 @@ class Ion {
     "ws_cnx": null,
     "ws_wlc": null,
   };
-  Map cfg = null;
-  bool production = false;
+  Map cfg;
+  bool production;
 
-  Ion(p, {Map this.cfg, bool this.production}) {
+  Ion(p, {Map this.cfg, bool this.production = false}) {
     _init(p);
   }
 
@@ -28,7 +30,7 @@ class Ion {
     print(ip);
     srv = await HttpServer.bind(ip, port);
 
-    var ctx = SecurityContext();
+    //var ctx = SecurityContext();
 
     await for (HttpRequest req in srv) {
       var res = req.response;

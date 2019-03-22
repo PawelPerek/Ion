@@ -10,7 +10,7 @@ class IonResponse {
     srv = s;
   }
 
-  send(data){
+  send(data) {
     if (data is File) {
       var str = data.readAsBytesSync();
       original.headers.contentType = ion_mime(data.path);
@@ -36,12 +36,11 @@ class IonResponse {
   }
 
   render(path, [Map data]) {
-    var SUPER = {
-      "ION.version": "0.4b"
-    };
-    if(data is Map){
+    var SUPER = {"ION.version": "0.4b"};
+    if (data is Map) {
       SUPER.addAll(data);
-    };
+    }
+    ;
     var prefix = srv.get("paths").containsKey("render")
         ? srv.get("paths")["render"]
         : "";

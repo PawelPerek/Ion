@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:convert';
 
-class IonRequest{
+class IonRequest {
   HttpRequest original;
   Map qs;
   Map body;
@@ -20,7 +20,7 @@ class IonRequest{
   }
 
   init() async {
-    post  = await original.transform(Utf8Decoder()).join();
+    post = await original.transform(Utf8Decoder()).join();
     print(post);
     body = Uri(query: post).queryParameters;
   }
