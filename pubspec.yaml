@@ -2,6 +2,6 @@ name: ion
 author: Paweł Perek <pawelperek99@gmail.com>
 description: A HTTP framework highly influenced by Express in which you easy and fast make a server without writing a lot of code
 homepage: https://github.com/drPeru/Ion
-version: 0.4.4
+version: 0.4.4+1
 environment:
   sdk: '>=2.0.0 <3.0.0'
